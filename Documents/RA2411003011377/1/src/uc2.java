@@ -1,8 +1,13 @@
+import java.util.Scanner;
+
 public class uc2 {
 
     public static void main(String[] args) {
 
-        String word = "madam";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String word = scanner.nextLine();
 
         String reversed = "";
 
@@ -11,11 +16,11 @@ public class uc2 {
         }
 
         if (word.equals(reversed)) {
-            System.out.println("The word \"" + word + "\" is a Palindrome.");
+            System.out.println("The string \"" + word + "\" is a Palindrome.");
         } else {
-            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+            System.out.println("The string \"" + word + "\" is NOT a Palindrome.");
         }
 
-        System.out.println("Program executed successfully.");
+        scanner.close();
     }
 }
